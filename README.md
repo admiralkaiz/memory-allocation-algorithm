@@ -7,10 +7,10 @@ Memori komputer adalah tempat di mana sistem komputer menyimpan data program sem
 ## Problem Modelling
 
 Terdapat dua array masukan, yakni array $P$ dan array $F$.
-- P adalah array yang berisi $n$ elemen, dan untuk setiap $i = \set{ x | 0 \lt x \le n \}$, elemen $P_i$ adalah ukuran data program ke-$i$.
-- F adalah array yang berisi $m$ elemen, dan untuk setiap $j = \set{ x | 0 \lt x \le m \}, elemen $F_j$ adalah ukuran _internal fragmentation_ ke-j. _Internal fragmentation_ adalah "lubang" ruang memori kosong ditengah-tengah blok memori. 
+- P adalah array yang berisi $n$ elemen, dan untuk setiap $i = \set{ x | 0 \lt x \le n \}$, elemen $P_i$ adalah ukuran data program ke- $i$.
+- F adalah array yang berisi $m$ elemen, dan untuk setiap $j = \set{ x | 0 \lt x \le m \}, elemen $F_j$ adalah ukuran _internal fragmentation_ ke- $j$. _Internal fragmentation_ adalah "lubang" ruang memori kosong ditengah-tengah blok memori. 
 
-Solusi ada dalam bentuk array $S$ yang berisi $n$ elemen, dan untuk setiap $i = \set{ x | 0 \lt x \le n \}$, elemen $S_i$ adalah nomor _internal fragmentation_ yang harus ditempatkan oleh data ke-$i$ 
+Solusi ada dalam bentuk array $S$ yang berisi $n$ elemen, dan untuk setiap $i = \set{ x | 0 \lt x \le n \}$, elemen $S_i$ adalah nomor _internal fragmentation_ yang harus ditempatkan oleh data ke- $i$ 
 
 ## Brute Force Strategy
 
