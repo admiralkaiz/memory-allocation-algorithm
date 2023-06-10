@@ -1,0 +1,49 @@
+program Memory_BruteForce
+kamus
+    n,m         : integer
+    arrData     : array [1..n] of integer
+    arrMem      : array [1..m] of integer
+    solution    : array [1..n] of integer
+
+algoritma
+    read(n,m)
+    read(arrData)
+    read(arrMem)
+
+    for i <- 1 to len(possibilities(n,m)) do
+        if evaluateSolution(possibilities[i], arrData, arrMem) then
+            add possibilities[i] to solution array
+        endif
+    endfor
+
+    return solution array
+
+endprogram
+
+
+function possibilities(n,m)
+{fungsi mengembalikan sekumpulan array of integer yang berisi
+bilangan-bilangan n digit yang mungkin dibentuk dengan setiap
+digitnya memiliki angka dari 1 hingga m}
+
+algoritma
+    return array of array[1..n] of integer
+
+endfunction
+
+
+function evaluateSolution(solusi, arrData, arrMemori)
+{fungsi mengembalikan true jika solusi dapat diterima}
+kamus
+    memAlloc    : array [1..m] of integer
+algoritma
+    memAlloc <- arrMemori
+
+    for i in len(solusi) do
+        memAlloc[solusi[i]] -= arrData[i]
+        if memAlloc[solusi[i]] < 0 then return false
+    endfor
+
+    return true
+
+endfunction

@@ -1,0 +1,33 @@
+program Memory_Greedy
+kamus
+    n,m         : integer
+    arrData     : array [1..n] of integer
+    arrMem      : array [1..m] of integer
+    solution    : array [1..n] of integer
+    closest     : integer
+    choice      : integer
+
+algoritma
+    read(n,m)
+    read(arrData)
+    read(arrMem)
+
+    {Asumsi baik arrData maupun arrMem terurut mengecil}
+
+    for i <- 1 to len(arrData) do
+        closest <- arrMem[1] - arrData[i]
+        choice <- 1
+        for j <- 2 to len(arrMem) do
+            if arrMem[j] - arrData[i] < closest and arrMem[j] - arrData[i] >= 0 then
+                closest <- arrMem[j] - arrData[i]
+                choice <- j
+            endif
+            solusi[i] <- choice
+        endfor
+    endfor
+
+    return solution 
+
+endprogram
+
+
